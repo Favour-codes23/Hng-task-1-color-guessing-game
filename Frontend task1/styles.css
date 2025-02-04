@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    background-color: rgb(17, 24, 39);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  .container {
+    max-width: 42rem;
+    width: 100%;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #c084fc, #db2777);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .instructions {
+    font-size: 1.125rem;
+    color: rgb(209, 213, 219);
+    margin-bottom: 2rem;
+  }
+  
+  .color-box {
+    width: 100%;
+    height: 12rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    transition: transform 0.3s;
+  }
+  
+  .color-box:hover {
+    transform: scale(1.02);
+  }
+  
+  .game-status {
+    font-size: 1.25rem;
+    font-weight: 600;
+    height: 2rem;
+    margin-bottom: 2rem;
+    transition: opacity 0.3s;
+  }
+  
+  .game-status.correct {
+    color: rgb(74, 222, 128);
+  }
+  
+  .game-status.wrong {
+    color: rgb(248, 113, 113);
+  }
+  
+  .color-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .color-options {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .color-option {
+    height: 6rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .color-option:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .game-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .score {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .new-game-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: rgb(124, 58, 237);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .new-game-btn:hover {
+    background-color: rgb(109, 40, 217);
+  }
+  
+  .new-game-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgb(124, 58, 237), 0 0 0 4px rgba(124, 58, 237, 0.1);
+  }
